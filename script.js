@@ -8,7 +8,7 @@ downloadBtn.addEventListener("click", (e) => {
 });
 
 function fetchFile(url) {
-  fetch(url)
+  fetch(url, { mode: "no-cors" })
     .then((res) => res.blob())
     .then((file) => {
       let tempUrl = URL.createObjectURL(file);
